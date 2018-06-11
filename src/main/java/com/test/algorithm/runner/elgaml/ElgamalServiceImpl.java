@@ -19,6 +19,7 @@ public class ElgamalServiceImpl implements ElgamalService {
 		Response response = new Response();
 		try {
 			Elgamal elgaml = generateKey(secretKey);
+			elgaml.setId(-1);
 			Random sc = new SecureRandom();
 			BigInteger X = new BigInteger(plainText);
 			BigInteger r = new BigInteger(64, sc);

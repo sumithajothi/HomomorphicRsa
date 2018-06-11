@@ -27,9 +27,10 @@ public class Elgamal {
 	public Elgamal() {
 	}
 
-	public Elgamal(String propablePrime, String modPow, String secretKey, String valueB, String rValue,
+	public Elgamal(int id, String propablePrime, String modPow, String secretKey, String valueB, String rValue,
 			String encryptedData, String moduloData, String cypherModuloPrime, String dValue, String decryptedValue) {
 		super();
+		this.id = id;
 		this.propablePrime = propablePrime;
 		this.modPow = modPow;
 		this.secretKey = secretKey;
@@ -40,6 +41,14 @@ public class Elgamal {
 		this.cypherModuloPrime = cypherModuloPrime;
 		this.dValue = dValue;
 		this.decryptedValue = decryptedValue;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getPropablePrime() {
